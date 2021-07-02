@@ -14,7 +14,7 @@ body {
   color: aliceblue;
 }
 .card {
-  background-color: #000000;
+  background-color: #000;
   opacity: 0.6;
   color: floralwhite;
 }
@@ -22,10 +22,10 @@ body {
   background-color: #333;
   color: gray;
   border-radius: 7px;
-  border: 2px solid #000000;
+  border: 2px solid #000;
 }
 .list-group-item:hover {
-  background-color: #000000;
+  background-color: #000;
   border-radius: 7px;
   border: 0;
   transform: scaleX(1.1);
@@ -35,11 +35,11 @@ body {
   background-color: #333;
   color: gray;
   border-radius: 7px;
-  border: 2px solid #000000;
+  border: 2px solid #000;
 }
 .btn-success:hover,
 .btn-primary:hover {
-  background-color: #000000;
+  background-color: #000;
   border-radius: 7px;
   border: 0;
   border-bottom: 2px solid #333;
@@ -49,31 +49,28 @@ body {
   transform: scaleZ(1.5);
 }
 a i {
-  color: #000000;
+  color: #000;
 }
 a i:hover {
-  color: #ffffff;
+  color: #fff;
 }
 .footer a i {
   color: #333;
 }
 .footer a i:hover {
-  color: #ffffff;
+  color: #fff;
 }
 .nav a {
-  color: #ffffff;
+  color: #fff;
 }
 .nav a:hover {
-  background: #000000;
+  background: #000;
   color: #333;
   border: 0;
 }
 .footer {
-  background: #000000;
+  background: #000;
   opacity: 0.6;
-  /* margin: 0;
-  padding: 0;
-  width: 100%; */
 }
 .lead {
   font-weight: bold;
@@ -88,9 +85,5 @@ a i:hover {
   color: ghostwhite;
 }
 .highlight {
-  color: #000000;
+  color: #000;
 }
-
-/* span {
-  color: #000000;
-} */
