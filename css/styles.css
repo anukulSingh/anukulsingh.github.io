@@ -1,15 +1,10 @@
-@font-face {
-  font-family: roboto-regular;
-  src: url('../fonts/Handlee-Regular.ttf');
-}
 * {
   box-sizing: border-box;
   line-height: 175%;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-family: handlee-regular;
+  font-family: "Libre Baskerville", serif;
 }
 body {
-  background: url('../images/bg.jpg') no-repeat;
+  background: url("../images/bge.jpg") no-repeat;
   background-size: cover;
   color: aliceblue;
 }
@@ -20,9 +15,15 @@ body {
 }
 .list-group-item {
   background-color: #333;
-  color: gray;
+  color: floralwhite;
   border-radius: 7px;
+<<<<<<< HEAD
   border: 2px solid #000;
+=======
+  border: 2px solid #000000;
+  font-family: "Libre Baskerville", serif;
+  font-weight: bold;
+>>>>>>> development
 }
 .list-group-item:hover {
   background-color: #000;
@@ -49,7 +50,31 @@ body {
   transform: scaleZ(1.5);
 }
 a i {
-  color: #000;
+  color: burlywood;
+}
+a .facebook i {
+  color: #1877f2;
+}
+a .twitter i {
+  color: #1da1f2;
+}
+a .instagram i {
+  color: #c32aa3;
+}
+a .linkedin i {
+  color: #0a66c2;
+}
+a .reddit i {
+  color: #ff4500;
+}
+a .github i {
+  color: gray;
+}
+a .mail i {
+  color: red;
+}
+a .codesandbox i {
+  color: seagreen;
 }
 a i:hover {
   color: #fff;
@@ -81,9 +106,8 @@ a i:hover {
 }
 .name {
   font-weight: bold;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   color: ghostwhite;
 }
 .highlight {
-  color: #000;
+  color: floralwhite;
 }
