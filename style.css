@@ -1,5 +1,5 @@
 :root {
-    --page-1-color: #000000;
+    --page-1-color: #fff;
     --page-2-color: #1a1a1a;
     --page-3-color: #333333;
     --page-4-color: #4d4d4d;
@@ -17,14 +17,16 @@ body {
 }
 /* page colors */
 
-#page-1 { background: var(--page-1-color) }
+/* #page-1 { background-image: var(--page-1-color) }
 #page-2 { background: var(--page-2-color) }
 #page-3 { background: var(--page-3-color) }
 #page-4 { background: var(--page-4-color) }
-#page-5 { background: var(--page-5-color) }
+#page-5 { background: var(--page-5-color) } */
 
 .page {
     display: flex;
+    background-image: url("./images/bg.png");
+    background-size: cover;
     flex-direction: column;
     height: 100vh;
     align-items: center;
@@ -36,6 +38,7 @@ section {
     text-align: left;
     align-items:flex-start;
 }
+
 .page h1 {
     font-size: 4rem;
     line-height: 1.2;
@@ -44,11 +47,13 @@ section {
 .page p {
     font-size: 1.3rem;
 }
+
+
 .btn {
     display: inline-block;
     padding: 1rem 2rem;
-    background: #f4f4f4;
-    color: black;
+    background: #333;
+    color: #fff;
     text-decoration: none;
     margin-top: 1rem;
     border: none;
@@ -66,13 +71,29 @@ section {
 }
 /*page-animation*/
 
+.card {
+    background-color:  rgba(256, 256, 256, 0.40);
+    /* box-shadow: 0 2px 8px rgba(256, 256, 256, 0.25); */
+    border-radius: 0.6rem;
+    border: none;
+    text-align: left;
+}
+.card ul li {
+    /* opacity: 0.5; */
+    background: none;
+    border: none;
+    color: #000;
+}
+
 #page-1 h1 {
     transform: translateY(-1200px);
     animation: heading var(--animate-speed) forwards ease-out;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 }
 #page-1 p {
     transform: translateX(-1800px);
     animation: text var(--animate-speed) forwards ease-in 1s;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.80);
 }
 /*keyframes*/
 @keyframes heading {
