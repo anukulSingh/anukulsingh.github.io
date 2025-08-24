@@ -8,12 +8,23 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
     line-height: 1.4;
-    color: #fff;
+    color: #4B3621;
     margin: 0;
     padding: 0;
     overflow: hidden;
+}
+h1, h2, h3 {
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
+  letter-spacing: -0.5px;
 }
 /* page colors */
 
@@ -33,7 +44,16 @@ body {
     justify-content: center;
     text-align: center;
     padding: 0 4rem;
+
+    /* 👇 animation */
+    animation: fadeIn 1s ease forwards;
+    opacity: 0; /* start transparent */
 }
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
 section {
     text-align: left;
     align-items:flex-start;
@@ -51,49 +71,133 @@ section {
 
 .btn {
     display: inline-block;
-    padding: 1rem 2rem;
-    background: #333;
+    padding: 0.9rem 2rem;
+    background: linear-gradient(135deg, #6f4e37, #8b5e3c); /* coffee gradient */
     color: #fff;
     text-decoration: none;
     margin-top: 1rem;
     border: none;
     font-size: 1.1rem;
-    border-radius: .5rem;
-    transition: all 0.3 ease-in;
+    border-radius: 2rem; /* pill-shaped buttons */
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    letter-spacing: 0.5px;
 }
-.btn:hover,.btn-dark {
-    background: black;
+
+.btn:hover {
+    background: linear-gradient(135deg, #8b5e3c, #a47148); /* lighter roast hover */
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.35);
+    box-shadow: 0 0 12px rgba(139, 94, 60, 0.8), 0 6px 16px rgba(0,0,0,0.35);
+    color: #fff;
+}
+
+
+/* Dark version */
+.btn-dark {
+    background: linear-gradient(135deg, #3b2f2f, #5c4033); /* dark roast */
     color: #f4f4f4;
 }
+
 .btn-dark:hover {
-    background: #f4f4f4;
-    color: black;
+    background: linear-gradient(135deg, #5c4033, #7b4f3f);
+    color: #fff;
 }
+
 /*page-animation*/
 
+
+
+
 .card {
-    background-color:  rgba(256, 256, 256, 0.40);
-    /* box-shadow: 0 2px 8px rgba(256, 256, 256, 0.25); */
-    border-radius: 0.6rem;
-    border: none;
-    text-align: left;
+  background: rgba(111, 78, 55, 0.25); /* coffee brown glass */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #f5f5f5; /* ✅ readable text */
 }
+
 .card ul li {
-    /* opacity: 0.5; */
-    background: none;
-    border: none;
-    color: #000;
+  background: none;
+  border: none;
+  color: inherit; /* ✅ inherits from .card */
 }
+.card h2, 
+.card h3 {
+  color: #a47148; /* coffee accent */
+}
+
+.card ul li::marker {
+  color: #a47148;
+}
+
+.card img {
+  transition: transform 0.4s ease, filter 0.4s ease;
+  border-radius: 0.6rem 0.6rem 0 0;
+}
+.card:hover img {
+  transform: scale(1.05);
+  filter: brightness(0.9);
+}
+
+#contact {
+  background: rgba(111, 78, 55, 0.25); /* coffee brown glass */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(255,255,255,0.15);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  color: #f4f4f4; /* text light on dark bg */
+}
+
+#contact h2 {
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: #fff; /* header pops */
+}
+
+#contact .form-control {
+  background: rgba(255, 255, 255, 0.15); 
+  border: 1px solid rgba(255,255,255,0.25);
+  color: #fff;
+}
+
+#contact .form-control::placeholder {
+  color: rgba(255,255,255,0.7);
+}
+
+#contact textarea.form-control {
+  resize: none;
+}
+
+#contact .btn {
+  margin-top: 1rem;
+  background: #6f4e37; /* solid coffee button */
+  color: #fff;
+  border: none;
+}
+
+#contact .btn:hover {
+  background: #4b2e20; /* darker roast */
+  color: #fff;
+}
+
+
+
 
 #page-1 h1 {
     transform: translateY(-1200px);
     animation: heading var(--animate-speed) forwards ease-out;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.01);
 }
 #page-1 p {
     transform: translateX(-1800px);
     animation: text var(--animate-speed) forwards ease-in 1s;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.80);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.01);
 }
 /*keyframes*/
 @keyframes heading {
