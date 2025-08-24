@@ -11,6 +11,10 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 
 
 body {
@@ -45,14 +49,8 @@ h1, h2, h3 {
     text-align: center;
     padding: 0 4rem;
 
-    /* 👇 animation */
-    animation: fadeIn 1s ease forwards;
-    opacity: 0; /* start transparent */
 }
 
-@keyframes fadeIn {
-    to { opacity: 1; }
-}
 
 section {
     text-align: left;
